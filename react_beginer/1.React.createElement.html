@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <div id="root"></div>
+    <!-- <div class="tittle">React Tutorials</div>
+    <img src="http://lorempixel.com/400/200"> -->
+    <script>
+        // thuộc tính trong Element gọi là prop
+        // Title,Image,... gọi là React component (Element)
+        const Title = React.createElement('div',{
+            className: 'title'
+        }, 'Hello');
+        const Image = React.createElement('img',{
+            src:'http://lorempixel.com/400/200'
+        });
+        const App = React.createElement('div',null,Title,Image); // Element
+        const ROOT = document.getElementById('root');
+        // React component sẽ đc ReactDOM map sang HtmlDOM tương ứng
+        ReactDOM.render(App,ROOT);
+    </script>
+    <!-- Mô tả object theo JS
+    <script>
+        {
+            Type :'div',
+            className:'Title',
+            children:'Hello'
+        }
+    </script> -->
+</body>
+
+</html>
